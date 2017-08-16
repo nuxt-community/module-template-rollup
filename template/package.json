@@ -1,0 +1,40 @@
+{
+  "name": "{npm}",
+  "version": "0.0.0",
+  "description": "{description}",
+  "license": "MIT",
+  "author": {
+    "name": "{author}"
+  },
+  "main": "dist/index.js",
+  "repository": "https://github.com/{github}",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nuxt-module",
+    "lint": "eslint lib src test",
+    "test": "npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "prepare": "npm run test"
+  },
+  "eslintIgnore": [
+    "*.template.*"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "dist"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "nuxt-module-builder": "latest"
+  }
+}
