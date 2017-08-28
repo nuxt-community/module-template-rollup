@@ -8,25 +8,20 @@ module.exports = {
       name: {
         'type': 'string',
         'required': true,
-        'message': 'Package name'
-      },
-      npm: {
-        'type': 'string',
-        'required': true,
-        'message': 'Npm package name'
-      },
-      github: {
-        'type': 'string',
-        'message': 'Github repository (like nuxt-community/test-module)'
+        'message': 'NPM package name'
       },
       description: {
         'type': 'string',
         'message': 'Module description',
+      },
+      github: {
+        'type': 'string',
+        'message': 'Github repository (user/repo)'
       },
       author: {
         'type': 'string',
         'message': 'Author'
       },
     },
-    completeMessage: '{{#inPlace}}To get started:\n\n  npm install # Or yarn\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install # Or yarn\n  npm run dev{{/inPlace}}'
+    completeMessage: '{{#inPlace}}To get started:\n\n npm install # Or yarn\n npm run watch{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install # Or yarn\n  npm run watch{{/inPlace}}'
   };

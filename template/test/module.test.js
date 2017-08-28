@@ -29,12 +29,6 @@ describe('Module', () => {
     await nuxt.close()
   })
 
-  // TODO
-  test('options', async () => {
-    expect(nuxt.__module_test_value__).toEqual(123)
-  })
-
-  // TODO
   test('render', async () => {
     let html = await get('/')
     expect(html).toContain('Works!')

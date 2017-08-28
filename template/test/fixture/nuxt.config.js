@@ -5,8 +5,6 @@ module.exports = {
     resourceHints: false
   },
   modules: [
-    ['~/../..', {
-      test: 123
-    }]
+    ['~/../..', {}]
   ]
 }

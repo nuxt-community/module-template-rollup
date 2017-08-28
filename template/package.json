@@ -1,22 +1,26 @@
 {
-  "name": "{npm}",
+  "name": "{{ name }}",
   "version": "0.0.0",
-  "description": "{description}",
+  "description": "{{ description }}",
   "license": "MIT",
-  "author": {
-    "name": "{author}"
-  },
+  "contributors": [
+    {
+      "name": "{{ author }}"
+    }
+  ],
   "main": "dist/index.js",
-  "repository": "https://github.com/{github}",
+  "repository": "https://github.com/{{ github }}",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "nuxt-module",
+    "watch": "nuxt-module --watch",
     "lint": "eslint lib src test",
-    "test": "npm run lint && jest",
+    "lint-fix": "eslint --fix lib src test",
+    "test": "NODE_ENV=test npm run build && npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish",
-    "prepare": "npm run test"
+    "prepare": "npm run test && npm run build"
   },
   "eslintIgnore": [
     "*.template.*"
@@ -29,7 +33,11 @@
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib",
+      "src"
+    ]
   },
   "dependencies": {
 

@@ -1,12 +1,10 @@
-import { resolve } from 'path'
+const { resolve } = require('path')
 
-export default async function myModule (moduleOptions) {
+export default async function module (moduleOptions) {
   const options = Object.assign({}, moduleOptions)
 
-  this.nuxt.__module_test_value__ = options.test
-
-  this.addPlugin({
-    src: resolve(__dirname, '../templates/plugin.js'),
-    options
-  })
+  // this.addPlugin({
+  //   src: resolve(__dirname, '../templates/plugin.js'),
+  //   options
+  // })
 }
