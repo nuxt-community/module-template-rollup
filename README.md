@@ -2,34 +2,31 @@
 
 > Starter template for Nuxt.js Modules
 
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
-Make sure to use a version of vue-cli >= 2.1 (vue -V).
 
 ## Features
 
-- Using [Nuxt Module Builder](https://github.com/nuxt/module-builder), You can use latest ECMA Script features, including async/await
+- Using [Nuxt Module Builder](https://github.com/nuxt/module-builder), You can use latest ECMAScript features, including **async/await**
 - ESLint
-- Test suit using jest
+- Ready tests using [Jest](https://facebook.github.io/jest)
 - Code coverage
 - Circle CI
+- Standard Version
 
 ## Create a Nuxt Module
 
+This is a template for [vue-cli](https://github.com/vuejs/vue-cli).
+Make sure to use a version of vue-cli >= 2.1 (vue -V) is installed.
+If you don't already have it, just install it.
+
 ```bash
-vue init nuxt-community/module-template module-name
-cd <project-name>
+vue init nuxt-community/module-template <module-name>
+cd <module-name>
 yarn install # or npm install
 ```
 
 ## Development
 For easier development you can use [yarn link](https://yarnpkg.com/lang/en/docs/cli/link/) or [npm link](https://docs.npmjs.com/cli/link)
-to link to your project. Yhen start build using `npm run dev`.
-You can use Conventional commits for good auto change logs using `standard-version`.
-
-## Continues integration
-It is advices enabling CircleCI for your module project so tests and coverage will be automatically run on each push.
-
-## Publish
+to link to your project. Then start build using `npm run dev`. To version & publish module:
 
 ```bash
 npm run release
