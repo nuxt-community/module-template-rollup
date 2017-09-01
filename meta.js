@@ -3,7 +3,10 @@ module.exports = {
     helpers: {
       raw: options => options.fn(this)
     },
-    skipInterpolation: "**/*.vue",
+    skipInterpolation: [
+      "**/*.vue",
+      ".circleci/*.*"
+    ],
     prompts: {
       name: {
         'type': 'string',
