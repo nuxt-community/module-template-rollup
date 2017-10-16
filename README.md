@@ -1,7 +1,8 @@
-# Module Template
+# Module Template for Nuxt.js With Rollup
 
 > Starter template for Nuxt.js Modules
 
+If you don't need rollup transpiling it is recommended using simpler variant [module-template](https://github.com/nuxt-community/module-template).
 
 ## Features
 
@@ -19,7 +20,7 @@ Make sure to use a version of vue-cli >= 2.1 (vue -V) is installed.
 If you don't already have it, just install it.
 
 ```bash
-vue init nuxt-community/module-template <module-name>
+vue init nuxt-community/module-template-rollup <module-name>
 cd <module-name>
 yarn install # or npm install
 ```
